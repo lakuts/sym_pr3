@@ -1,0 +1,10 @@
+/symfony/var/log/*
+/symfony/vendor/
+/symfony/composer.lock
+/symfony/php-cs-fixer.cache
+/symfony/php-cs-fixer.php
+/symfony/composer.phar
+/symfony/package.tar
+/symfony/packages.json
+/symfony/.phpunit
+/mysql/*

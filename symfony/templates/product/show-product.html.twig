@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product!{% endblock %}
+
+{% block  main_cont %}
+
+    <br>
+    <h1></h1>
+    <h1>{{ product.name }} ✅</h1><br>
+    <b> {{ product.description|raw }} </b><br><br>
+    <b> Price {{ product.price }}$ </b><br><br>
+    <b><img src="{{ product.imageNamePath }}"> </b><br>
+
+
+{% endblock %}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+
+<header>
+    {% block header %}
+        <div class="header_logo">
+            <a>SYM_PR3</a>
+        </div>
+
+        {# add admin button #}
+        {% if app.user and app.user.admin %}
+            <button class="green"><a href="{{ path('admin') }}">Admin</a></button>
+        {% endif %}
+
+
+        <nav>
+            <ul>
+                <li><a href="{{ path('main') }}">Main</a></li>
+{#                <li><a href="{{ path('news') }}">News-test</a></li>#}
+{#                <li><a href="">Link3-Empty</a></li>#}
+
+            </ul>
+        </nav>
+
+        {% if app.user %}
+            You are logged in as {{ app.user.userIdentifier }}
+            <button class="green"><a href="{{ path('app_logout') }}">Logout</a></button>
+        {% else %}
+            <button class="green"><a href="{{ path('app_login') }}">Login</a></button>
+            <button class="green"><a href="{{ path('app_register') }}">Registration</a></button>
+        {% endif %}
+
+    {% endblock %}
+</header>
+
+<body>
+{% block body %}
+
+    <div class="center_block_main">
+
+{#        {{ dump(category_service) }}#}
+        <aside>
+            {% block  aside %}
+                <ul>
+                    <li>
+                        {# <a href="{{ path('category') }}">Categories</a> #}
+                        {% for category in category_service.getAllRootCategories() %}
+{#                            <a href="{{ path('showCategory', {'id': category.id}) }}">{{ category.name }}</a>#}
+                            <a href="{{ path('showCategory', {'name': category.name}) }}">{{ category.name }}</a>
+                        {% endfor %}
+                    </li>
+                </ul>
+            {% endblock %}
+        </aside>
+
+        <main_cont>
+            {% block  main_cont %}
+
+            {% endblock %}
+        </main_cont>
+
+    </div>
+
+{% endblock %}
+</body>
+
+<footer>
+    {% block footer %}
+        <br> </br>
+        <a href={{ 'http://slmeat.by/' }}>OUR GENERAL SPONSOR</a>
+        <br> </br>
+        <br> </br>
+    {% endblock %}
+</footer>
+
+
+</html>
