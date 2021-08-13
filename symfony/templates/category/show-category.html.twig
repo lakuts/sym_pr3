@@ -10,13 +10,14 @@
 
     {% for child in category.child %}
         {# <a href="{{ path('showCategory', {'id': child.id}) }}">{{ child.name }}</a><br> </br> #}
-        <a href="{{ path('showCategory', {'name': child.name}) }}">{{ child.name }}</a><br> </br>
+        <a href="{{ path('showCategory', {'alias': child.alias}) }}">{{ child.name }}</a><br> </br>
     {% endfor %}
 
     <br> </br>
 
     {% for childProduct in category.childProduct %}
-        <a href="{{ path('product', {'name': childProduct.name}) }}">{{ childProduct.name }}</a><br> </br>
+{#        <a href="{{ path('product', {'name': childProduct.name}) }}">{{ childProduct.name }}</a><br> </br>#}
+        <a href="{{ path('product', {'alias': childProduct.alias}) }}">{{ childProduct.name }}</a><br> </br>
     {% endfor %}
 
     {# {% for category in subcategories %} #}

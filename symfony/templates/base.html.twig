@@ -52,7 +52,7 @@
                         {# <a href="{{ path('category') }}">Categories</a> #}
                         {% for category in category_service.getAllRootCategories() %}
 {#                            <a href="{{ path('showCategory', {'id': category.id}) }}">{{ category.name }}</a>#}
-                            <a href="{{ path('showCategory', {'name': category.name}) }}">{{ category.name }}</a>
+                            <a href="{{ path('showCategory', {'alias': category.alias}) }}">{{ category.name }}</a>
                         {% endfor %}
                     </li>
                 </ul>

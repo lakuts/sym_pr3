@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/product/{name}", name="product")
+     * @Route("/product/{alias}", name="product")
      */
     public function showProduct(Product $product): Response
     {
