@@ -173,9 +173,13 @@ class Product
 
     public function getPrice(): ?float
     {
-        return $this->price / 100;
+        return $this->price;
     }
 
+    public function getFormatedPrice(): ?float
+    {
+        return $this->price / 100;
+    }
     public function setPrice(float $price): self
     {
         $this->price = $price;
