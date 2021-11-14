@@ -8,3 +8,4 @@
 /symfony/packages.json
 /symfony/.phpunit
 /mysql/*
+.idea
