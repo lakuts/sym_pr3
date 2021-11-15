@@ -11,6 +11,16 @@
     <b> Price {{ product.formatedprice }}$ </b><br><br>
     <b><img src="{{ product.imageNamePath }}"> </b><br>
 
+    <form class="mt-4 p-4 bg-light" method="post">
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control" id="quantity">
+        </div>
+        <button class="green">Add to Cart</button>
+    </form>
+
+
+
 
 
 {% endblock %}
