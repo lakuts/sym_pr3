@@ -18,15 +18,20 @@
             <button class="green"><a href="{{ path('admin') }}">Admin</a></button>
         {% endif %}
 
+        <button class="green"><a href="{{ path('cart') }}">Cart</a></button>
+        <button class="green"><a href="{{ path('main') }}">Main</a></button>
 
-        <nav>
-            <ul>
-                <li><a href="{{ path('main') }}">Main</a></li>
+
+{#        <nav>#}
+{#            <ul>#}
+{#                <li><a href="{{ path('main') }}">Main</a></li>#}
+{#                <button class="green"><a href="{{ path('cart') }}">Cart</a></button>#}
+{#                <button class="green"><a href="{{ path('main') }}">Main</a></button>#}
 {#                <li><a href="{{ path('news') }}">News-test</a></li>#}
 {#                <li><a href="">Link3-Empty</a></li>#}
 
-            </ul>
-        </nav>
+{#            </ul>#}
+{#        </nav>#}
 
         {% if app.user %}
             You are logged in as {{ app.user.userIdentifier }}
