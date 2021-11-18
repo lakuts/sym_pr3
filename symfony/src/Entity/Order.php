@@ -104,6 +104,7 @@ class Order
     {
         foreach ($this->getItems() as $item) {
             $this->removeItem($item);
+
         }
 
         return $this;

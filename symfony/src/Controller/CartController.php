@@ -16,6 +16,8 @@ class CartController extends AbstractController
      */
     public function showCart(CartManagerService $cartManager, Request $request): Response
     {
+//        echo "CartController works \n";
+
         $cart = $cartManager->getCurrentCart();
 
         $form = $this->createForm(CartType::class, $cart);
